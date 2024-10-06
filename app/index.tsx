@@ -1,7 +1,6 @@
 import * as SplashScreen from 'expo-splash-screen';
 import 'react-native-reanimated';
 import { Text, View } from 'react-native';
-import { StyleSheet } from 'react-native';
 import { Link } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 
