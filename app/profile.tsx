@@ -4,9 +4,8 @@ const Profile = () => {
 
     return (
         <View>
-            <Text>Profile</Text>
+            <Text className='font-bold text-2xl'>Profile</Text>
         </View>
     )
 }
 export default Profile
-const styles = StyleSheet.create({})
