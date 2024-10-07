@@ -10,7 +10,7 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
     return (
         <View className="flex flex-1 items-center justify-center">
-            <Text className='font-bold text-2xl text-red-700'>TopLali</Text>
+            <Text className='font-bold font-pblack text-2xl text-red-700'>TopLali</Text>
             <StatusBar />
             <Link href="/profile">Go to profile</Link>
         </View>
