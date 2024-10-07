@@ -21,7 +21,7 @@ const SignIn = () => {
   return (
     <SafeAreaView className='bg-primary h-full'>
       <ScrollView>
-        <View className='w-full justify-center items-center h-full px-4 my-6'>
+        <View className='w-full justify-center items-center min-h-[75vh] px-4 my-6'>
           <Image 
             source={images.logo}
             resizeMode='contain'
@@ -29,7 +29,7 @@ const SignIn = () => {
           />
 
           <Text className='text-2xl text-white font-semibold mt-10 font-psemibold'> 
-            Log In to Aora
+            Sign In to Aora
           </Text>
 
           <FormField 
