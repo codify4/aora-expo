@@ -8,12 +8,12 @@ import { Link, router } from 'expo-router'
 import { createUser } from '@/lib/appwrite'
 
 const SignUp = () => {
-  const [form, setForm] = useState({
-    username: '',
-    email: '',
-    password: '',
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+    const [form, setForm] = useState({
+        username: '',
+        email: '',
+        password: '',
+    });
+    const [isSubmitting, setIsSubmitting] = useState(false);
   
 
     const submit = async () => {
