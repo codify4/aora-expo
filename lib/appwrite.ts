@@ -24,14 +24,10 @@ const avatars = new Avatars(client);
 const db = new Databases(client);
 
 export async function createUser(email: string, password: string, username: string) {
-    const randomString = Math.random().toString(36).substring(2, 15);
-
-    // Combine username and random string to create user ID
-    const userId = `${username.replace(/[^a-zA-Z0-9.-_]/g, "").toLowerCase()}_${randomString}`
   
     try {
       const newAccount = await account.create(
-        userId,
+        ID.unique(),
         email,
         password,
         username
@@ -46,7 +42,7 @@ export async function createUser(email: string, password: string, username: stri
       const newUser = await db.createDocument(
         config.databaseId,
         config.userCollectionId,
-        userId,
+        ID.unique(),
         {
           accountId: newAccount.$id,
           email: email,
