@@ -9,7 +9,7 @@ type ButtonProps = {
     isLoading?: boolean;
 };
 
-const CustonButton = ({ title, handlePress, containerStyles, textStyles, isLoading }: ButtonProps) => {
+const CustomButton = ({ title, handlePress, containerStyles, textStyles, isLoading }: ButtonProps) => {
   return (
     <TouchableOpacity 
         className={`bg-secondary-100 rounded-xl min-h-[62px] flex flex-row justify-center items-center ${containerStyles} ${isLoading ? 'opacity-50' : ''}`}
@@ -23,4 +23,4 @@ const CustonButton = ({ title, handlePress, containerStyles, textStyles, isLoadi
     </TouchableOpacity>
   )
 }
-export default CustonButton
+export default CustomButton

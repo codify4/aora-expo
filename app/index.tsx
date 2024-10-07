@@ -1,10 +1,11 @@
 import * as SplashScreen from 'expo-splash-screen';
 import 'react-native-reanimated';
-import { ScrollView, Text, View, Image, StatusBar } from 'react-native';
+import { ScrollView, Text, View, Image } from 'react-native';
 import { Redirect , router } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { images } from '@/constants';
-import CustomButton from '@/components/CustonButton';
+import CustomButton from '@/components/CustomButton';
+import { StatusBar } from 'expo-status-bar';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -43,7 +44,7 @@ export default function Welcome() {
                 </View>
             </ScrollView>
 
-            <StatusBar backgroundColor='#161622' barStyle='light-content' />
+            <StatusBar backgroundColor='#161622' style='light' />
         </SafeAreaView>
     );
 }
