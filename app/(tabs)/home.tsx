@@ -2,17 +2,20 @@ import EmptyState from '@/components/EmptyState'
 import SearchInput from '@/components/SearchInput'
 import Trending from '@/components/Trending'
 import images from '@/constants/images'
-import { useState } from 'react'
-import { View, Text, FlatList, Image, RefreshControl } from 'react-native'
+import { getAllPosts } from '@/lib/appwrite'
+import useAppwrite from '@/lib/useAppwrite'
+import { useEffect, useState } from 'react'
+import { View, Text, FlatList, Image, RefreshControl, Alert } from 'react-native'
+import { Models } from 'react-native-appwrite'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 const Home = () => {
+  const { data: posts, refetch } = useAppwrite(getAllPosts);
   const [refreshing, setRefreshing] = useState(false);
 
   const onRefresh = async () => {
     setRefreshing(true);
-
-    //recall videos -> if new vidoeos appeard
+    await refetch()
     setRefreshing(false);
   }
   
