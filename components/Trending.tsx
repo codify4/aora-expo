@@ -5,15 +5,13 @@ import * as Animatable from 'react-native-animatable';
 import { Models } from 'react-native-appwrite';
 
 
-
 const TrendingItem = ({ activeItem, item }: { activeItem: Models.Document, item: Models.Document }) => {
     const [play, setPlay] = useState(false);
     
-    console.log(activeItem.$id, item.$id)
     return (
         <Animatable.View 
             className='mr-5'
-            animation='zoomIn'
+            animation={activeItem.id === item.id ? 'zoomIn' : 'zoomOut'}
         >
 
             {play ? (
