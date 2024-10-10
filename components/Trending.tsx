@@ -13,7 +13,7 @@ const TrendingItem = ({ activeItem, item }: { activeItem: Models.Document, item:
     return (
         <Animatable.View 
             className='mr-5'
-            animation={activeItem.$id === item.$id ? 'zoomIn' : 'zoomOut'}
+            animation='zoomIn'
         >
 
             {play ? (

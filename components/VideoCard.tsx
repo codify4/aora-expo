@@ -49,7 +49,7 @@ const VideoCard = ({ post }: { post: Models.Document }) => {
                     onPress={() => setPlay(true)}
                 >
                     <Image 
-                        source={{ uri: thumbnail}}
+                        source={{ uri: thumbnail }}
                         className='w-full h-full rounded-xl mt-3'
                         resizeMode='cover'
                     />
